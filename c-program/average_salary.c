@@ -9,7 +9,7 @@
 
 int main()
 {
-    int numbers[ ] = {1,2,3,4};
+    int numbers[ ] = {2300, 5600, 8200, 1430, 9600}};
     int lenght;
     int i;
     int sum = 0;
