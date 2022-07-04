@@ -1,35 +1,43 @@
 #include <stdio.h>
 
 /**
- * main - get the average of an array of salary
- * 
- * Return: return 0 as success
- */
+*  main - return the average of sum of salary excluding thr minimum and maximum
+*
+*  Return: return 0 as success
+*/
+
 
 int main()
 {
-	int salaries[] = {2300, 4500, 7390, 4269, 7605};
-	int lenght;
-	int i;
-	int sum = 0;
-	int average_salary;
-
-	lenght = sizeof(salaries) / sizeof(salaries[0]);
-
-	for (i = 0; i < lenght; i++)
-	{
-		if (i == 0 || i == (lenght - 1))
-		{
-			continue;
-		}
-		else
-		{
-			sum += salaries[i];
-		}
-	}
-	average_salary = sum / (lenght - 2);
-	printf("Average salary is: %d\n", average_salary);
-
-	return (0);
+    int numbers[ ] = {1,2,3,4};
+    int lenght;
+    int i;
+    int sum = 0;
+    int average_sum;
+    int min = numbers[0];
+    int max = numbers[0];
+    
+    lenght = sizeof(numbers) / sizeof(numbers[0]);
+    
+    for (i = 0; i < lenght; i++)
+    {
+        if (numbers[i] < numbers[0])
+        {
+            min = numbers[i];
+        }
+        else if (numbers[i] > numbers[0])
+        {
+            max = numbers[i];
+        }
+    }
+    for (i = 0; i < lenght; i++)
+    {
+        if (numbers[i] != min && numbers[i] != max)
+        {
+            sum += numbers[i];
+        }
+    }
+    average_sum = sum / (lenght - 2);
+    printf("Average salary is : %d", average_sum);
+    return (0);
 }
-
